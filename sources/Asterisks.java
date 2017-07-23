@@ -7,8 +7,14 @@ public class Asterisks {
             this.printSingleAsterisks();
         }
     }
+    void drawVerticalLine (int n) {
+        for (int i = 0;i < n; i++) {
+            this.printSingleAsterisks();
+            System.out.println("");
+        }
+    }
     public static void main (String[] args) {
         Asterisks asterisks = new Asterisks();
-        asterisks.drawHorizontalLine(8);
+        asterisks.drawVerticalLine(3);
     }
 }
