@@ -13,8 +13,16 @@ public class Asterisks {
             System.out.println("");
         }
     }
+    void drawRightTriangle (int n) {
+        for (int i = 0;i < n; i++) {
+            for (int j = 0;j <= i;j++) {
+                this.printSingleAsterisks();
+            }
+            System.out.println("");
+        }
+    }
     public static void main (String[] args) {
         Asterisks asterisks = new Asterisks();
-        asterisks.drawVerticalLine(3);
+        asterisks.drawRightTriangle(3);
     }
 }
