@@ -37,8 +37,29 @@ public class Asterisks {
         }
     }
 
+    void drawDiamond (int n) {
+        for (int i = 0;i < n/2+1; i++) {
+            for (int k = 1;k < n-i;k++) {
+                System.out.print(" ");
+            }
+            for (int j = 0;j < (2*i+1);j++) {
+                this.printSingleAsterisks();
+            }
+            System.out.println("");
+        }
+        for (int i = n/2;i > 0; i--) {
+            for (int k = n-i;k > 0;k--) {
+                System.out.print(" ");
+            }
+            for (int j = (2*i-1);j > 0 ;j--) {
+                this.printSingleAsterisks();
+            }
+            System.out.println("");
+        }
+    }
+
     public static void main (String[] args) {
         Asterisks asterisks = new Asterisks();
-        asterisks.drawIsoscelesTriangle(3);
+        asterisks.drawDiamond(7);
     }
 }
